@@ -15,7 +15,6 @@ export type AppProps = {
 export type dataProps = {
   title: string;
   color: string;
-  image: string;
   timeframes: {
     daily: {
       current: number;

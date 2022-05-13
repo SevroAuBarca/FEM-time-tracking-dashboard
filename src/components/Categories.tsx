@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "../App.module.scss";
 import { AppProps } from "../TypeScript/types.modules";
+import icon from "../images/icon-ellipsis.svg";
+import { imgs } from "../server/utils";
 
 export const Categories = ({ data, time, timeframe }: AppProps) => {
   return (
     <>
-      {data?.map(({ title, color, image, timeframes }) => (
-        <section className={`${styles.card} ${styles[color]}`}>
+      {data?.map(({ title, color, timeframes }, index) => (
+        <section key={title} className={`${styles.card} ${styles[color]}`}>
           <img
             className={`${styles.card_icon} `}
-            src={image}
+            src={imgs[index]}
             alt="icon image"
           />
           <article className={styles.card_data}>
@@ -17,7 +19,7 @@ export const Categories = ({ data, time, timeframe }: AppProps) => {
               <h2 className={styles.card_title}>{title}</h2>
               <img
                 className={`${styles.card_states} ${styles.card_states_img}`}
-                src="../images/icon-ellipsis.svg"
+                src={icon}
                 alt="elipsis"
               />
             </div>

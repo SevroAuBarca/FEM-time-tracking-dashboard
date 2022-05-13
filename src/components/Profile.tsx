@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../App.module.scss";
 import { AppProps } from "../TypeScript/types.modules";
+import img from "../images/image-jeremy.png";
 
 export const Profile = ({ timeframe, handleClick }: AppProps) => {
   return (
@@ -37,7 +38,7 @@ export const Profile = ({ timeframe, handleClick }: AppProps) => {
         <div className={styles.card_img}>
           <img
             className={styles.card_profile_img}
-            src={"../../images/image-jeremy.png"}
+            src={img}
             alt="profile image"
           />
         </div>
